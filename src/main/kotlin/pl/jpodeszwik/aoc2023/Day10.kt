@@ -102,7 +102,7 @@ fun bfs(map: PipeMap): Set<Coord> {
     return visited
 }
 
-fun part1(map: PipeMap) {
+private fun part1(map: PipeMap) {
     println(bfs(map).size / 2)
 }
 
