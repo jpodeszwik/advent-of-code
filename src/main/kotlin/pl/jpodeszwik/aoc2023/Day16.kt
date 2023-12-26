@@ -7,7 +7,14 @@ enum class Direction {
     UP,
     DOWN,
     LEFT,
-    RIGHT,
+    RIGHT;
+
+    fun opposite() = when (this) {
+        UP -> DOWN
+        DOWN -> UP
+        LEFT -> RIGHT
+        RIGHT -> LEFT
+    }
 }
 
 data class NodeWithDirection(val node: MapCoord, val direction: Direction) {
