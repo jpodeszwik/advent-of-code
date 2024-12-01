@@ -1,5 +1,8 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.flipBit
+import pl.jpodeszwik.util.loadEntireFile
+
 private fun findAnagram(ints: List<Int>, notEqualTo: Int? = null): Int? {
     var biggestAnagram: Int? = null
     var biggestAnagramLength = 0

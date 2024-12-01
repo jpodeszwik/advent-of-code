@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
 import java.util.*
 
 data class Signal(val src: String, val dst: String, val high: Boolean)

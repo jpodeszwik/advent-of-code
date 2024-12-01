@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadEntireFile
 import java.lang.Integer.parseInt
 import java.util.*
 

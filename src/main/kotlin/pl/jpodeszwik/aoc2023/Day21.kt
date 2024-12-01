@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
 import java.util.*
 
 private fun part1(startingPoint: MapCoord, walkableTiles: Set<MapCoord>) {

@@ -1,5 +1,8 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
+import pl.jpodeszwik.util.measureTimeSeconds
+
 private fun part1(instructions: String, nodes: Map<String, Pair<String, String>>) {
     var currentNode = "AAA"
     var steps = 0L

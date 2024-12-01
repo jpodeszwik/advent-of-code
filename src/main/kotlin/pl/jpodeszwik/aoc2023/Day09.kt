@@ -1,5 +1,7 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
+
 private fun solve(line: String): Long {
     val numbers = line.split(" ").map { java.lang.Long.parseLong(it) }
     val diffs = ArrayList<List<Long>>()

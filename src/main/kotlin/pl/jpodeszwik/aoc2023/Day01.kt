@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
 import java.lang.Long.parseLong
 
 private val numbers = mapOf(

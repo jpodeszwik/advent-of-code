@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
 import java.lang.Integer.parseInt
 
 private fun hash(input: String): Int {

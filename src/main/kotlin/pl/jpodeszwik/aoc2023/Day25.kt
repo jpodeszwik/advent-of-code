@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
 import java.util.*
 
 private fun calculateSizes(graph: Map<String, List<String>>, removedEdges: Set<List<String>>) {

@@ -1,4 +1,4 @@
-package pl.jpodeszwik.aoc2023
+package pl.jpodeszwik.util
 
 import kotlin.system.measureTimeMillis
 

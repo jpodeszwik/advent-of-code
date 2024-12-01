@@ -1,5 +1,7 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
+
 private val cardValues = mapOf(
     'A' to 14,
     'K' to 13,

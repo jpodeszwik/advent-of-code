@@ -1,5 +1,6 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min

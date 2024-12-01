@@ -1,5 +1,8 @@
 package pl.jpodeszwik.aoc2023
 
+import pl.jpodeszwik.util.loadFile
+import pl.jpodeszwik.util.measureTimeSeconds
+
 data class Range(
     val source: Long,
     val target: Long,
