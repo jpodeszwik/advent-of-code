@@ -1,17 +1,16 @@
 package pl.jpodeszwik.aoc2024
 
+import pl.jpodeszwik.util.DOWN
+import pl.jpodeszwik.util.DOWN_LEFT
+import pl.jpodeszwik.util.DOWN_RIGHT
+import pl.jpodeszwik.util.Direction
+import pl.jpodeszwik.util.LEFT
+import pl.jpodeszwik.util.RIGHT
+import pl.jpodeszwik.util.UP
+import pl.jpodeszwik.util.UP_LEFT
+import pl.jpodeszwik.util.UP_RIGHT
+
 import pl.jpodeszwik.util.loadFile
-
-private class Direction(val x: Int, val y: Int)
-
-private val UP = Direction(0, -1)
-private val DOWN = Direction(0, 1)
-private val LEFT = Direction(-1, 0)
-private val RIGHT = Direction(1, 0)
-private val UP_LEFT = Direction(-1, -1)
-private val UP_RIGHT = Direction(1, -1)
-private val DOWN_LEFT = Direction(-1, 1)
-private val DOWN_RIGHT = Direction(1, 1)
 
 private val DIRECTIONS = listOf(UP, DOWN, LEFT, RIGHT, UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT)
 
