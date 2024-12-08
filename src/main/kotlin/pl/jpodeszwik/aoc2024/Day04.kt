@@ -3,7 +3,7 @@ package pl.jpodeszwik.aoc2024
 import pl.jpodeszwik.util.DOWN
 import pl.jpodeszwik.util.DOWN_LEFT
 import pl.jpodeszwik.util.DOWN_RIGHT
-import pl.jpodeszwik.util.Direction
+import pl.jpodeszwik.util.Vector
 import pl.jpodeszwik.util.LEFT
 import pl.jpodeszwik.util.RIGHT
 import pl.jpodeszwik.util.UP
@@ -14,7 +14,7 @@ import pl.jpodeszwik.util.loadFile
 
 private val DIRECTIONS = listOf(UP, DOWN, LEFT, RIGHT, UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT)
 
-private class Diagonal(val first: Direction, val second: Direction)
+private class Diagonal(val first: Vector, val second: Vector)
 
 private val DIAGONALS =
     listOf(

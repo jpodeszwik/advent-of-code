@@ -1,15 +1,12 @@
 package pl.jpodeszwik.aoc2024
 
+import pl.jpodeszwik.util.Coords
 import pl.jpodeszwik.util.DOWN
-import pl.jpodeszwik.util.Direction
+import pl.jpodeszwik.util.Vector
 import pl.jpodeszwik.util.LEFT
 import pl.jpodeszwik.util.RIGHT
 import pl.jpodeszwik.util.UP
 import pl.jpodeszwik.util.loadFile
-
-private data class Coords(val x: Int, val y: Int) {
-    fun next(direction: Direction) = Coords(x + direction.x, y + direction.y)
-}
 
 private val rotateDirections = mapOf(
     UP to RIGHT,
@@ -38,21 +35,21 @@ private fun part2(map: HashMap<Coords, Char>, initialPosition: Coords) {
 private fun detectCycle(map: HashMap<Coords, Char>, initialPosition: Coords): Boolean {
     var direction = UP
     var position = initialPosition
-    val visited = HashMap<Coords, Direction>()
+    val visited = HashMap<Coords, Vector>()
 
     while (true) {
         visited[position] = direction
 
-        while (map[position.next(direction)] != '.' && map[position.next(direction)] != null) {
+        while (map[position.move(direction)] != '.' && map[position.move(direction)] != null) {
             direction = rotateDirections[direction]!!
         }
 
-        val nextPosition = position.next(direction)
+        val nextPosition = position.move(direction)
         if (!map.contains(nextPosition)) {
             return false
         }
 
-        position = position.next(direction)
+        position = position.move(direction)
         if (visited[position] == direction) {
             return true
         }
@@ -66,15 +63,15 @@ private fun part1(map: HashMap<Coords, Char>, initialPosition: Coords) {
     while (true) {
         visited.add(position)
 
-        while (map[position.next(direction)] != '.' && map[position.next(direction)] != null) {
+        while (map[position.move(direction)] != '.' && map[position.move(direction)] != null) {
             direction = rotateDirections[direction]!!
         }
 
-        val nextPosition = position.next(direction)
+        val nextPosition = position.move(direction)
         if (!map.contains(nextPosition)) {
             break
         }
-        position = position.next(direction)
+        position = position.move(direction)
     }
     println(visited.size)
 }
